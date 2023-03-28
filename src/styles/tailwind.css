@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url(../assets/fonts/Satoshi/Satoshi-Variable.ttf)
+    format("woff-variations");
+  font-weight: 200 700;
+}
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: url(../assets/fonts/Clash_display/ClashDisplay-Variable.ttf)
+    format("woff-variations");
+  font-weight: 200 700;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth p-0 m-0 box-border;
+  }
+}
