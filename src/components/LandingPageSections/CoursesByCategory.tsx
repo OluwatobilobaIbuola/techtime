@@ -19,7 +19,7 @@ export default function CoursesByCategory() {
       <div className="">
         <h1
           className={`relative font-clashDisplay mb-2 leading-[36px] sm:leading-[50px] xl:leading-[70px]
-           xl:text-[56px] sm:text-[32px] text-[24px] font-[700] text-center sm:text-left text-textBlack`}
+           xl:text-[56px] sm:text-[32px] text-[24px] font-[700] text-center text-textBlack`}
         >
           Browse our popular courses
         </h1>
