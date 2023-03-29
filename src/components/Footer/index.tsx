@@ -7,12 +7,13 @@ import {
   youtube,
 } from "../../assets/icons";
 import { techtime } from "../../assets/images";
+import styles from "../../styles/styles";
 
 function Footer() {
   return (
-    <div className="bg-bgDark xxl:max-w-[1440px] w-full mx-auto ">
-      <div className={`py-12 sm:pt-40 pt-28 pb-28 sm:pb-60 px-4 sm:px-12`}>
-        <div className="flex sm:flex-row gap-y-[1rem] flex-col gap-x-36 text-white">
+    <div className="bg-bgDark">
+      <div className={`py-12 sm:pt-40 pt-28 pb-28 sm:pb-60 px-4 sm:px-28`}>
+        <div className="flex lg:flex-row gap-y-8 flex-col justify-between text-white">
           <div className="">
             <Link to="/">
               <div className="flex items-center w-[100px] h-[38px] sm:w-[130px] sm:h-[47px]">
@@ -27,21 +28,17 @@ function Footer() {
               Reach out to us on any of our <br />
               social media networks
             </p>
-            <div className="flex items-center gap-x-8 mt-6">
-              <img src={facebook} />
-              <img src={twitter} />
-              <img src={youtube} />
-              <img src={instagram} />
-              <img src={discord} />
+            <div className="cursor-pointer flex items-center gap-x-8 mt-6">
+              <img src={facebook} alt="facebook logo" />
+              <img src={twitter} alt="twitter logo" />
+              <img src={youtube} alt="youtube logo" />
+              <img src={instagram} alt="instagram logo" />
+              <img src={discord} alt="discord logo" />
             </div>
           </div>
           <div className="">
-            <h3
-              className={`font-clashDisplay font-[700] text-[24px] leading-6  mb-[1rem] text-dimWhite`}
-            >
-              Useful links
-            </h3>
-            <ul>
+            <h3 className={`${styles.heading3}`}>Useful links</h3>
+            <ul className="cursor-pointer xl:text-[24px] leading-8 font-normal flex flex-col gap-y-4">
               <li>Home</li>
               <li>About</li>
               <li>Our Courses</li>
@@ -50,12 +47,8 @@ function Footer() {
             </ul>
           </div>
           <div className="">
-            <h3
-              className={`font-clashDisplay font-[700] text-[24px] leading-6  mb-[1rem] text-dimWhite`}
-            >
-              Community
-            </h3>
-            <ul>
+            <h3 className={`${styles.heading3}`}>Community</h3>
+            <ul className="cursor-pointer xl:text-[24px] leading-8 font-normal flex flex-col gap-y-4">
               <li>Help Centers</li>
               <li>Partners</li>
               <li>Suggestion</li>
@@ -64,12 +57,8 @@ function Footer() {
             </ul>
           </div>
           <div className="">
-            <h3
-              className={`font-clashDisplay  font-[700] text-[24px] leading-6 mb-[1rem] text-dimWhite`}
-            >
-              Subscribe
-            </h3>
-            <div className="relative h-[46px] w-[386px]">
+            <h3 className={`${styles.heading3}`}>Subscribe</h3>
+            <div className="relative h-[46px] max-w-[386px]">
               <input
                 className="pl-4 w-full h-full border border-primary bg-bgInput outline-none"
                 placeholder="Type here"

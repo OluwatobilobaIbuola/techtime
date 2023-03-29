@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  app:
+    container_name: docker-techtime
+    image: docker-techtime-image
+    build:
+      context: .
+    ports:
+      - 8080:80
