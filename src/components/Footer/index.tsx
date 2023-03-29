@@ -14,7 +14,7 @@ function Footer() {
     <div className="bg-bgDark">
       <div className={`py-12 sm:pt-40 pt-28 pb-28 sm:pb-60 px-4 sm:px-28`}>
         <div className="flex lg:flex-row gap-y-8 flex-col justify-between text-white">
-          <div className="">
+          <div className="flex-1">
             <Link to="/">
               <div className="flex items-center w-[100px] h-[38px] sm:w-[130px] sm:h-[47px]">
                 <img
@@ -36,7 +36,7 @@ function Footer() {
               <img src={discord} alt="discord logo" />
             </div>
           </div>
-          <div className="">
+          <div className="flex-1">
             <h3 className={`${styles.heading3}`}>Useful links</h3>
             <ul className="cursor-pointer xl:text-[24px] leading-8 font-normal flex flex-col gap-y-4">
               <li>Home</li>
@@ -46,7 +46,7 @@ function Footer() {
               <li>Our Community</li>
             </ul>
           </div>
-          <div className="">
+          <div className="flex-1">
             <h3 className={`${styles.heading3}`}>Community</h3>
             <ul className="cursor-pointer xl:text-[24px] leading-8 font-normal flex flex-col gap-y-4">
               <li>Help Centers</li>
@@ -56,14 +56,14 @@ function Footer() {
               <li>Newsletter</li>
             </ul>
           </div>
-          <div className="">
+          <div className="flex-1">
             <h3 className={`${styles.heading3}`}>Subscribe</h3>
             <div className="relative h-[46px] max-w-[386px]">
               <input
                 className="pl-4 w-full h-full border border-primary bg-bgInput outline-none"
                 placeholder="Type here"
               />
-              <button className="bg-primary text-white text-[14px] font-[500] absolute w-[123px] right-0 top-0 bottom-0">
+              <button className="bg-primary text-white text-[14px] font-[500] px-2 absolute max-w-[123px] right-0 top-0 bottom-0">
                 Send Message
               </button>
             </div>

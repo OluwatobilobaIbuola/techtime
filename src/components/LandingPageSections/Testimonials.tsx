@@ -1,11 +1,16 @@
-import React from "react";
 import { TESTIMONIALSARR } from "../../constant";
 import TestimonialCard from "../TestimonialCard";
 import { useAutoSliderHook } from "../../Hooks/useAutoSliderHook";
 import TestimonyNavigator from "../Navigator/TestimonyNavigator";
-
+import { motion } from "framer-motion";
+import { useCustomMedia } from "../../Hooks/useCustomMedia";
+type SliderProps = 332 | 606;
 export default function Testimonials() {
-  const { xLength, slideIndex } = useAutoSliderHook();
+  const { screenSize } = useCustomMedia();
+  const { slideIndex } = useAutoSliderHook();
+  let slideBy: SliderProps = screenSize < 768 ? 332 : 606;
+  let xLength = String(`-${slideIndex * slideBy}px`);
+
   return (
     <div className="px-4 sm:px-28 bg-bgNeutral py-12 sm:py-24 overflow-x-hidden">
       <div>
@@ -18,8 +23,14 @@ export default function Testimonials() {
           definition, generally any standard video image
         </p>
       </div>
-      <div
-        className={`w-[1660px] sm:w-[3030px] -translate-x-[${xLength}] flex gap-x-4 mt-12 transition ease-in-out duration-1000`}
+      <motion.div
+        initial={{ x: 0 }}
+        animate={{ x: xLength }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+        className={`w-[1660px] sm:w-[3030px] flex gap-x-4 mt-12`}
       >
         {TESTIMONIALSARR.map(
           ({ person, title, profilePicture, testimony }, index) => {
@@ -38,7 +49,7 @@ export default function Testimonials() {
             );
           }
         )}
-      </div>
+      </motion.div>
       <TestimonyNavigator slideIndex={slideIndex} />
     </div>
   );
