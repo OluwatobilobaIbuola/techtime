@@ -20,4 +20,7 @@
   html {
     @apply scroll-smooth p-0 m-0 box-border;
   }
+  body {
+    @apply bg-primary;
+  }
 }
