@@ -30,10 +30,10 @@ export default function CoursesCard({
       <div className="w-full">
         <img src={image} className="w-full" alt="course thumbnail" />
         <div className="flex justify-between mt-4 items-center">
-          <span className="font-[700] rounded-[16px] px-4 py-1 flex items-center  bg-bgLightBlue text-primary">
+          <span className="font-[700] rounded-[16px] px-4 py-1 flex items-center text-[12px] sm:text-[16px] bg-bgLightBlue text-primary">
             {category}
           </span>
-          <div className="flex gap-x-2 items-center">
+          <div className="flex gap-x-2 items-center text-[12px] sm:text-[16px]">
             <div className="flex items-center gap-x-1">
               <span>{(reviews / 1000).toFixed(1)}k</span>
               <img src={star} alt="star icon" />
@@ -43,13 +43,13 @@ export default function CoursesCard({
         </div>
       </div>
       <div className="mt-6">
-        <h4 className="pr-16 text-textBlack font-semibold font-clashDisplay text-[24px] leading-[30px]">
+        <h4 className="pr-16 text-textBlack font-semibold font-clashDisplay text-[16px] sm:text-[24px] leading-[19px] sm:leading-[30px]">
           {courseTitle}
         </h4>
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-center gap-x-2">
             <img src={time} alt="time icon" />
-            <span>
+            <span className="text-[12px] sm:text-[16px]">
               {(period / 3600).toFixed(0)}hrs{" "}
               {((period % 3600) / 60).toFixed(0)}
               mins

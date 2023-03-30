@@ -19,3 +19,4 @@ export { default as uxresearch } from "./uxresearch.png";
 export { default as git } from "./git.png";
 export { default as tutorImage } from "./tutorImage.png";
 export { default as cta } from "./cta.png";
+export { default as plot } from "./pear-scatter-plot.png";
