@@ -7,6 +7,7 @@ import {
   coursesImageOne,
   coursesImageTwo,
   crown,
+  plot,
   semiCircle,
 } from "../../assets/images";
 import { AvatarGroup, Avatar } from "@mui/material";
@@ -16,19 +17,22 @@ export default function Courses() {
   const { screenSize } = useCustomMedia();
   return (
     <section className="bg-bgNeutral px-4 sm:pl-40 sm:pr-28 py-10 sm:py-24 relative">
-      <div className="items-center flex md:flex-row flex-col gap-y-10">
+      <div className="items-center flex md:flex-row flex-col gap-y-10 relative z-[2]">
         <div className="flex-1 relative flex flex-col items-center md:items-stretch">
           <h1
             className={`relative font-clashDisplay mb-2 leading-[36px] sm:leading-[50px] xl:leading-[70px] xl:text-[56px]
-             sm:text-[32px] text-[24px] font-[700] text-left text-textBlack`}
+             sm:text-[32px] text-[24px] font-[700] text-center sm:text-left text-textBlack `}
           >
-            High quality video, audio <br className="hidden xl:inline-block" />&
-            live classes
-            <img
-              src={crown}
-              className="absolute -top-[15px] sm:-top-[27px] -left-[23px] sm:-left-[36px] h-[30px] sm:h-[50px]"
-              alt="crown icon"
-            />
+            <span className="relative">
+              High{" "}
+              <img
+                src={crown}
+                className="absolute -top-[15px] sm:-top-[27px] -left-[23px] sm:-left-[36px] h-[30px] sm:h-[50px]"
+                alt="crown icon"
+              />
+            </span>
+            quality video, audio <br className="hidden xl:inline-block" />& live
+            classes
           </h1>
           <p className="mt-4 sm:mt-8 text-neutralTwo text-center md:text-left text-[12px] sm:text-[16px]">
             High-defination video is video of higher resolution and quality than
@@ -92,7 +96,7 @@ export default function Courses() {
           </div>
         </div>
         <div className="flex-1 flex justify-center">
-          <div className="relative xxl:max-w-[606px] max-w-[406px] max-h-[312px] xxl:max-h-[512px] w-[80%] mx-auto">
+          <div className="relative z-[1] xxl:max-w-[606px] max-w-[406px] max-h-[312px] xxl:max-h-[512px] w-[80%] mx-auto">
             <LazyLoadImage
               src={coursesImageOne}
               className="w-full h-full rounded-[24px] border-[4px] sm:border-[9px] border-borderColorOne relative z-1"
@@ -112,7 +116,7 @@ export default function Courses() {
                 placeholderSrc={coursesImageTwo}
               />
             </div>
-            <div className="flex flex-col items-center rounded-[8px] bg-white p-2 absolute -left-[70px] sm:-left-[120px] top-[30px] xs:top-[50px] xxl:top-[100px]">
+            <div className="flex flex-col items-center rounded-[8px] bg-white p-2 absolute -left-[50px] sm:-left-[120px] top-[30px] xs:top-[50px] xxl:top-[100px]">
               <p className="text-[8px] xs:text-[12px] text-center xs:leading-7 text-textBlack font-[700] xs:mb-2">
                 255k+ Enrolled Student
               </p>
@@ -164,12 +168,17 @@ export default function Courses() {
                 />
               </AvatarGroup>
             </div>
+            <img
+              src={plot}
+              className="absolute -right-[50px] -bottom-[50px] -z-[1]"
+              alt="plot icon"
+            />
           </div>
         </div>
       </div>
       <img
         src={semiCircle}
-        className="absolute right-0 bottom-[10%]"
+        className="absolute right-0 bottom-[50%] sm:bottom-[10%] z-[1] h-[80px]"
         alt="semi-circle icon"
       />
     </section>
