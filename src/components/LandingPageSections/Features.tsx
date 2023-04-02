@@ -3,7 +3,14 @@ import { featuresImageOne, yellowSpiral } from "../../assets/images";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import styles from "../../styles/styles";
-import { meeting, mentor, people, prices } from "../../assets/icons";
+import {
+  circleTwo,
+  meeting,
+  mentor,
+  people,
+  prices,
+  triangle,
+} from "../../assets/icons";
 
 export default function Features() {
   return (
@@ -14,7 +21,7 @@ export default function Features() {
             className={`relative font-clashDisplay mb-2 leading-[36px] sm:leading-[50px] xl:leading-[70px] xl:text-[56px]
             sm:text-[32px] text-[24px] font-[700] text-center sm:text-left text-textBlack`}
           >
-            This is why we are better <br />
+            This is why we are better <br className="xl:block hidden" />
             than others
           </h3>
           <p className="mt-4 sm:mt-8 text-neutralTwo text-center md:text-left text-[12px] sm:text-[16px]">
@@ -101,6 +108,16 @@ export default function Features() {
         src={yellowSpiral}
         className="absolute hidden sm:inline-block sm:right-[30%] sm:top-[5%]"
         alt="yellow spiral icon"
+      />
+      <img
+        src={triangle}
+        className="absolute left-1 bottom-16 sm:left-[30px] sm:bottom-[190px] w-[10px] sm:w-[20px]"
+        alt="triangle icon"
+      />
+      <img
+        src={circleTwo}
+        alt="spiral icon"
+        className="absolute bottom-[27%] right-1 sm:right-12 sm:bottom-12 w-[10px] sm:w-[20px]"
       />
     </section>
   );

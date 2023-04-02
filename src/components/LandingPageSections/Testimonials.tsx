@@ -12,12 +12,12 @@ export default function Testimonials() {
   let xLength = String(`-${slideIndex * slideBy}px`);
 
   return (
-    <div className="px-4 sm:px-28 bg-bgNeutral py-12 sm:py-24 overflow-x-hidden">
+    <section className="px-4 sm:px-28 bg-bgNeutral py-12 sm:py-24 overflow-x-hidden">
       <div>
-        <h1 className="font-clashDisplay text-center mb-2 leading-[40px] sm:leading-[69px] sm:text-[56px] text-[32px] font-[700] text-textBlack">
+        <h1 className="font-clashDisplay text-center mb-2 leading-[40px] sm:leading-[69px] sm:text-[56px] xs:text-[32px] text-[24px] font-[700] text-textBlack">
           What our clients are saying
         </h1>
-        <p className="text-center font-[500] leading-[28px] text-[12px] sm:text-[16px] text-neutralTwo md:px-32">
+        <p className="max-w-[1046px] w-full mx-auto text-center font-[500] sm:leading-[28px] text-[12px] sm:text-[16px] text-neutralTwo md:px-32">
           High-defination video is video of higher resolution and quality than
           standard definition. while there's no standard meaning for high
           definition, generally any standard video image
@@ -51,6 +51,6 @@ export default function Testimonials() {
         )}
       </motion.div>
       <TestimonyNavigator slideIndex={slideIndex} />
-    </div>
+    </section>
   );
 }

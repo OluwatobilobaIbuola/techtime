@@ -10,7 +10,7 @@ import { useCustomMedia } from "../../Hooks/useCustomMedia";
 export default function Hero() {
   const { screenSize } = useCustomMedia();
   return (
-    <div className="relative flex items-center flex-col md:flex-row bg-primary gap-y-8 px-4 sm:px-28 pt-12">
+    <section className="relative flex items-center flex-col md:flex-row bg-primary gap-y-8 px-4 sm:px-28 pt-12">
       <div className="flex-1 relative flex flex-col items-center sm:items-stretch">
         <h1 className={`${styles.heading1} text-center sm:text-start`}>
           Grow your skills to <br className="hidden xxl:block" />
@@ -120,6 +120,6 @@ export default function Hero() {
         alt="spiral icon"
         className="absolute left-0 top-[50%]"
       />
-    </div>
+    </section>
   );
 }

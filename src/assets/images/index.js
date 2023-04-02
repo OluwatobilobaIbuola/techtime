@@ -20,3 +20,5 @@ export { default as git } from "./git.png";
 export { default as tutorImage } from "./tutorImage.png";
 export { default as cta } from "./cta.png";
 export { default as plot } from "./pear-scatter-plot.png";
+export { default as faqBgImage2 } from "./faqBgImageTwo.png";
+export { default as faqBgImage1 } from "./faqBgImageOne.png";
