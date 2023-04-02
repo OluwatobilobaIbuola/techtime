@@ -5,6 +5,7 @@ import DevelopmentCategory from "../CourseCategories/DevelopmentCategory";
 import MarketingCategory from "../CourseCategories/MarketingCategory";
 import { useState } from "react";
 import Button from "../Button/index";
+import { crosslike } from "../../assets/icons";
 const initialState: Record<string, boolean> = {
   com1: true,
   com2: false,
@@ -15,7 +16,12 @@ export default function CoursesByCategory() {
   const [showNext, setShowNext] =
     useState<Record<string, boolean>>(initialState);
   return (
-    <section className={`bg-bgNeutral px-4 sm:px-28 py-10 sm:py-20`}>
+    <section className={`relative bg-bgNeutral px-4 sm:px-28 py-10 sm:py-20`}>
+      <img
+        src={crosslike}
+        alt="crosslike icon"
+        className="absolute left-2 top-2 sm:left-[110px] sm:top-[200px] w-[20px] h-[20px] sm:w-[50px] sm:h-[50px]"
+      />
       <div className="">
         <h1
           className={`relative font-clashDisplay mb-2 leading-[36px] sm:leading-[50px] xl:leading-[70px]
@@ -23,7 +29,7 @@ export default function CoursesByCategory() {
         >
           Browse our popular courses
         </h1>
-        <p className="text-center font-[500] leading-[28px] text-[12px] sm:text-[16px] text-neutralTwo md:px-32">
+        <p className="max-w-[1046px] mx-auto w-full text-center font-[500] sm:leading-[28px] text-[12px] sm:text-[16px] text-neutralTwo md:px-32">
           High-defination video is video of higher resolution and quality than
           standard definition. while there's no standard meaning for high
           definition, generally any standard video image

@@ -3,7 +3,7 @@ import Button from "../Button/index";
 
 export default function CTA() {
   return (
-    <div className="px-4 sm:px-28 bg-primary py-12 sm:py-24">
+    <section className="px-4 sm:px-28 bg-primary py-12 sm:py-24">
       <div>
         <p className="text-center tracking-[0.05em] sm:tracking-[0.1em] font-[500] leading-[22px] text-[16px] text-white mb-2">
           JOIN OUR COMMUNITY
@@ -31,6 +31,6 @@ export default function CTA() {
           textColor="text-primary"
         />
       </div>
-    </div>
+    </section>
   );
 }

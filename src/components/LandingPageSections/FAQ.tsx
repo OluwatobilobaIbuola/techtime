@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useScrollToTop } from "../../Hooks/useScrollToTop";
 import { FAQARRONE } from "../../constant/index";
 import { motion, AnimatePresence } from "framer-motion";
-import { add, remove } from "../../assets/icons";
+import { add, circleTwo, remove } from "../../assets/icons";
+import { faqBgImage1, faqBgImage2, yellowSpiral } from "../../assets/images";
 
 const initialState: Record<string, boolean> = {
   faq1: false,
@@ -19,13 +20,13 @@ export default function FAQ() {
     setIsOpen({ ...initialState, [clicked]: !isOpen[clicked] });
   };
   return (
-    <div className={`bg-white px-4 py-10 sm:py-20`}>
+    <section className={`relative bg-white px-4 py-10 sm:py-20`}>
       <div className="max-w-[1046px] w-full mx-auto">
         <div className="">
-          <h1 className="font-clashDisplay text-center mb-2 leading-[69px] sm:text-[56px] text-[32px] font-[700] text-textBlack">
+          <h1 className="font-clashDisplay text-center mb-2 leading-[69px] sm:text-[56px] xs:text-[32px] text-[24px] font-[700] text-textBlack">
             Frequenctly Asked Questions
           </h1>
-          <p className="text-center font-[500] leading-[28px] text-[12px] sm:text-[16px] text-neutralTwo md:px-32">
+          <p className="text-center font-[500] sm:leading-[28px] text-[12px] sm:text-[16px] text-neutralTwo md:px-32">
             High-defination video is video of higher resolution and quality than
             standard definition. while there's no standard meaning for high
             definition, generally any standard video image
@@ -72,6 +73,26 @@ export default function FAQ() {
           })}
         </div>
       </div>
-    </div>
+      <img
+        src={yellowSpiral}
+        alt="circle icon"
+        className="absolute top-[200px] sm:top-[285px] -left-[30px] sm:left-0 w-[45px] sm:w-[75px]"
+      />
+      <img
+        src={circleTwo}
+        alt="spiral icon"
+        className="absolute top-6 right-3 sm:top-[100px] sm:right-[300px] w-[10px] sm:w-[20px]"
+      />
+      <img
+        src={faqBgImage1}
+        alt="side icon"
+        className="absolute top-6 hidden sm:inline-block right-0 sm:top-[100px]"
+      />
+      <img
+        src={faqBgImage2}
+        alt="side icon"
+        className="absolute bottom-6 hidden sm:inline-block left-0 sm:bottom-[100px]"
+      />
+    </section>
   );
 }

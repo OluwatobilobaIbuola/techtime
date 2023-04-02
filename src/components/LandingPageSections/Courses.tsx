@@ -170,7 +170,7 @@ export default function Courses() {
             </div>
             <img
               src={plot}
-              className="absolute -right-[50px] -bottom-[50px] -z-[1]"
+              className="absolute -right-[40px] -bottom-[40px] sm:-right-[25px] sm:-bottom-[8px] w-[150px] h-[150px] -z-[1]"
               alt="plot icon"
             />
           </div>

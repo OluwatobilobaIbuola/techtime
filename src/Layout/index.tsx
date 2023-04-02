@@ -11,7 +11,7 @@ export default function Pages() {
   const location = useLocation();
   return (
     <div className={mode === "true" ? "dark" : ""}>
-      <div className={`font-Satoshi`}>
+      <div className={`font-Satoshi max-w-[1728px] mx-auto`}>
         <NonAuthNavbar />
         <div className={`min-h-screen text-neutralTwo`}>
           <Routes location={location} key={location.key}>

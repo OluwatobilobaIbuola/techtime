@@ -24,3 +24,6 @@ export { default as meeting } from "./meeting.svg";
 export { default as lessons } from "./lessons.svg";
 export { default as star } from "./star.svg";
 export { default as time } from "./time.svg";
+export { default as crosslike } from "./crosslike.svg";
+export { default as circleTwo } from "./circle-two.svg";
+export { default as triangle } from "./triangle.svg";
