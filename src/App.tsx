@@ -1,12 +1,12 @@
-import Pages from "./Layout/index";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import Layout from "./Layout/index";
 function App() {
   return (
     <>
       <HelmetProvider>
         <BrowserRouter>
-          <Pages />
+          <Layout />
         </BrowserRouter>
       </HelmetProvider>
     </>

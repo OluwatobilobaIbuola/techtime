@@ -8,7 +8,8 @@ export default function CTA() {
         <p className="text-center tracking-[0.05em] sm:tracking-[0.1em] font-[500] leading-[22px] text-[16px] text-white mb-2">
           JOIN OUR COMMUNITY
         </p>
-        <h1 className="font-clashDisplay text-center mb-2 leading-[30px] sm:leading-[69px] sm:text-[56px] text-[30px] font-[700] text-white">
+        <h1 className="font-clashDisplay text-center mb-2 leading-[30px] sm:leading-[69px] sm:text-[56px] text-[30px]
+         font-[700] text-white">
           Are you ready to connect with the future talent of the tech world
         </h1>
         <p className="text-center font-[500] leading-[22px] text-[16px] text-white">

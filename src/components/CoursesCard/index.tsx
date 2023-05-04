@@ -30,7 +30,8 @@ export default function CoursesCard({
       <div className="w-full">
         <img src={image} className="w-full" alt="course thumbnail" />
         <div className="flex justify-between mt-4 items-center">
-          <span className="font-[700] rounded-[16px] px-4 py-1 flex items-center text-[12px] sm:text-[16px] bg-bgLightBlue text-primary">
+          <span className="font-[700] rounded-[16px] px-4 py-1 flex items-center text-[12px] sm:text-[16px]
+           bg-bgLightBlue text-primary">
             {category}
           </span>
           <div className="flex gap-x-2 items-center text-[12px] sm:text-[16px]">
@@ -43,7 +44,8 @@ export default function CoursesCard({
         </div>
       </div>
       <div className="mt-6">
-        <h4 className="pr-16 text-textBlack font-semibold font-clashDisplay text-[16px] sm:text-[24px] leading-[19px] sm:leading-[30px]">
+        <h4 className="pr-16 text-textBlack font-semibold font-clashDisplay text-[16px]
+         sm:text-[24px] leading-[19px] sm:leading-[30px]">
           {courseTitle}
         </h4>
         <div className="flex items-center justify-between mt-4">
