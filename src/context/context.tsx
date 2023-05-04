@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 import { EventValuesContextType, mode } from "../types";
 
 export const EventValues = createContext<EventValuesContextType>({
-  mode: "false",
+  mode: "true",
   screenSize: window.innerWidth,
   setScreenSize: () => {},
   setMode: () => {},

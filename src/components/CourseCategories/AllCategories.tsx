@@ -3,7 +3,7 @@ import CoursesCard from "../CoursesCard/index";
 
 export default function AllCategories() {
   return (
-    <div className="flex flex-wrap gap-8 items-center  mt-12">
+    <div className="flex flex-wrap gap-8 mt-12">
       {COURSESARR.map(
         (
           {

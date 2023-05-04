@@ -23,7 +23,7 @@ export default function FAQ() {
     <section className={`relative bg-white px-4 py-10 sm:py-20`}>
       <div className="max-w-[1046px] w-full mx-auto">
         <div className="">
-          <h1 className="font-clashDisplay text-center mb-2 leading-[69px] sm:text-[56px] xs:text-[32px] text-[24px] font-[700] text-textBlack">
+          <h1 className="font-clashDisplay text-center mb-2 leading-[40px] sm:leading-[69px] sm:text-[56px] xs:text-[32px] text-[24px] font-[700] text-textBlack">
             Frequenctly Asked Questions
           </h1>
           <p className="text-center font-[500] sm:leading-[28px] text-[12px] sm:text-[16px] text-neutralTwo md:px-32">
@@ -58,9 +58,9 @@ export default function FAQ() {
                 <AnimatePresence mode="wait">
                   {isOpen[faq.isPresent] && (
                     <motion.p
-                      exit={{ opacity: 0, y: "-100%" }}
-                      initial={{ opacity: 0, y: "-100%" }}
-                      animate={{ opacity: 1, y: "0" }}
+                      exit={{ opacity: 0, height: 0, y: "-100%" }}
+                      initial={{ opacity: 0, height: 0, y: "-100%" }}
+                      animate={{ opacity: 1, y: "0", height: "auto" }}
                       transition={{ duration: 0.5, ease: "easeIn" }}
                       className={` ${"relative z-[1]"} text-neutralTwo pb-8 font-normal text-[0.8rem] sm:text-[1rem] leading-[1.4rem]`}
                     >

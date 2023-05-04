@@ -170,7 +170,7 @@ export const COURSESARR = [
     tutorImage: tutorImage,
     tutorName: "Leonard Victor",
     coursePrice: 15,
-    category: "marketing",
+    category: "Marketing",
     period: 10922,
   },
   {
@@ -182,7 +182,7 @@ export const COURSESARR = [
     tutorImage: tutorImage,
     tutorName: "Leonard Victor",
     coursePrice: 20,
-    category: "marketing",
+    category: "Marketing",
     period: 10720,
   },
 ];

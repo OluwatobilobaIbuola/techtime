@@ -6,7 +6,7 @@ import { NonAuthNavbar } from "../components/Navbar";
 import Footer from "../components/Footer/index";
 const LandingPage = WithSuspense(lazy(() => import("../Pages/LandingPage")));
 
-export default function Pages() {
+export default function Layout() {
   const mode = useCustomMode();
   const location = useLocation();
   return (
