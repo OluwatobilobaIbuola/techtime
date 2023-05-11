@@ -3,7 +3,7 @@ import { techtime } from "../../assets/images/index";
 import Button from "../Button/index";
 import { useCustomScroll } from "../../Hooks/useCustomScroll";
 import { motion } from "framer-motion";
-import HamburgerMenu from "./HamburgerMenu";
+import HamburgerIcon from "./HamburgerIcon";
 
 export default function NonAuthNavbar(): JSX.Element {
   const animation = useCustomScroll();
@@ -91,7 +91,7 @@ export default function NonAuthNavbar(): JSX.Element {
               />
             </div>
           </div>
-          <HamburgerMenu />
+          <HamburgerIcon />
         </div>
       </div>
     </motion.div>
