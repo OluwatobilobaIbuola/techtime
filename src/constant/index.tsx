@@ -10,6 +10,53 @@ import {
   tutorImage,
   uxresearch,
 } from "../assets/images";
+import { HamburgerMenuType } from "../types";
+
+export const initialState = {
+  showSubHamburgerMenu1: false,
+  showSubHamburgerMenu2: false,
+  showSubHamburgerMenu3: false,
+  showSubHamburgerMenu4: false,
+  showSubHamburgerMenu5: false,
+};
+
+export const hamburgerMenu: HamburgerMenuType[] = [
+  {
+    menu: "Home",
+    subMenu: {
+      name: "Lorem lon lo",
+      isPresent: "showSubHamburgerMenu1",
+    },
+  },
+  {
+    menu: "About",
+    subMenu: {
+      name: "Lorem lon lo",
+      isPresent: "showSubHamburgerMenu2",
+    },
+  },
+  {
+    menu: "Courses",
+    subMenu: {
+      name: "Lorem lon lo",
+      isPresent: "showSubHamburgerMenu3",
+    },
+  },
+  {
+    menu: "Testimonials",
+    subMenu: {
+      name: "Lorem lon lo",
+      isPresent: "showSubHamburgerMenu4",
+    },
+  },
+  {
+    menu: "Community",
+    subMenu: {
+      name: "Lorem lon lo",
+      isPresent: "showSubHamburgerMenu5",
+    },
+  },
+];
 
 export const FAQARRONE = [
   {

@@ -27,3 +27,4 @@ export { default as time } from "./time.svg";
 export { default as crosslike } from "./crosslike.svg";
 export { default as circleTwo } from "./circle-two.svg";
 export { default as triangle } from "./triangle.svg";
+export { default as arrowRight } from "./arrowRight.svg";

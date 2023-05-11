@@ -1,17 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState, useRef } from "react";
-import { useOnClickOutside } from "../../Hooks/useOnClickOutside";
 import { techtime } from "../../assets/images/index";
-import { close, menu } from "../../assets/icons";
 import Button from "../Button/index";
 import { useCustomScroll } from "../../Hooks/useCustomScroll";
 import { motion } from "framer-motion";
+import HamburgerMenu from "./HamburgerMenu";
 
 export default function NonAuthNavbar(): JSX.Element {
   const animation = useCustomScroll();
-  const [toggle, setToggle] = useState(false);
-  const closeRef = useRef<HTMLDivElement>(null);
-  useOnClickOutside(closeRef, () => setToggle((prev) => (prev = false)));
 
   const activeLink =
     "text-[16px] leading-[22px] font-[700] p-[8px] flex gap-x-4 items-center whitespace-nowrap text-white";
@@ -24,7 +19,7 @@ export default function NonAuthNavbar(): JSX.Element {
       className={`sm:h-[150px] h-[100px] bg-primary top-0 left-0 right-0 sticky z-[100]`}
     >
       <div className={`px-4 sm:px-28 h-full`}>
-        <div className={`h-full`}>
+        <div className={`h-full relative`}>
           <div className={`h-full flex justify-between gap-x-10 items-center`}>
             <Link to="/" className="flex-1">
               <div className="flex items-center sm:w-[100px] sm:h-[100px] w-[80px] h-[80px]">
@@ -95,18 +90,8 @@ export default function NonAuthNavbar(): JSX.Element {
                 textColor="text-primary"
               />
             </div>
-            <div
-              ref={closeRef}
-              className="sm:hidden flex flex-1 z-[10] justify-end items-center"
-            >
-              <img
-                src={toggle ? close : menu}
-                alt="menu"
-                className="w-[28px] h-[28px] object-contain"
-                onClick={() => setToggle((prev) => !prev)}
-              />
-            </div>
           </div>
+          <HamburgerMenu />
         </div>
       </div>
     </motion.div>

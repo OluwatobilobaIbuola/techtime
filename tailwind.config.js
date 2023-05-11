@@ -12,6 +12,7 @@ module.exports = {
         textBlueVariant: "#AAC4E6",
         primary: "#004DB3",
         secondary: "#F5F5F5",
+        secondary_two: "#d9d9d9",
         bgWhite: "#FFFFF",
         bgNeutral: "#F8F9FC",
         bgLightBlue: "#CCDBF0",

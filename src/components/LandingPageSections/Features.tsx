@@ -41,7 +41,7 @@ export default function Features() {
             />
           </div>
         </div>
-        <div className="flex-[40%] flex flex-wrap gap-2 sm:gap-8 items-center self-center">
+        <div className="flex-[40%] flex flex-wrap gap-2 sm:gap-8 self-center">
           <div className="sm:py-4 sm:px-8 px-2 py-2 flex-[40%] rounded-[8px] bg-white  xs:min-w-[300px]">
             <span
               className={`${styles.flexCenter} w-[30px] h-[30px] sm:w-[48px] sm:h-[48px] rounded-[4px] bg-bgBoxSix`}

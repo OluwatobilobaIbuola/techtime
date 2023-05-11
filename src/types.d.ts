@@ -1,3 +1,5 @@
+import { initialState } from "./constant";
+
 export type mode = "true" | "false";
 
 export interface EventValuesContextType {
@@ -7,3 +9,12 @@ export interface EventValuesContextType {
   toggleTheme(value: string): void;
   mode: mode;
 }
+
+export type SubHamburgerMenuType = {
+  [key: string]: string;
+  isPresent: keyof typeof initialState;
+};
+export type HamburgerMenuType = {
+  [key: string]: SubHamburgerMenuType | string;
+  subMenu: SubHamburgerMenuType;
+};
