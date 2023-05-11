@@ -1,16 +1,16 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { arrowRight } from "../../assets/icons";
 import { hamburgerMenu, initialState } from "../../constant";
-import { useOnClickOutside } from "../../Hooks/useOnClickOutside";
+import { useContext } from "react";
+import { EventValues } from "../../context/context";
 const activeLink =
   "text-[16px] leading-[22px] font-[700] p-[8px] flex gap-x-4 items-center whitespace-nowrap text-white";
 const normalLink = `text-[16px] leading-[22px] font-[700] flex gap-x-4 items-center whitespace-nowrap p-[8px] rounded-[16px] 
 text-textBlueVariant transition duration-500 ease-in-out`;
 
-export default function HamburgerMenu() {
-  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+const HamburgerMenu = React.memo(function HamburgerMenu() {
   const [showSubHamburgerMenu, setSubShowHamburgerMenu] =
     useState(initialState);
   const handleClick = (clicked: keyof typeof initialState) => {
@@ -19,30 +19,16 @@ export default function HamburgerMenu() {
       [clicked]: !showSubHamburgerMenu[clicked],
     });
   };
+  const { showHamburgerMenu } = useContext(EventValues);
   // const closeRef = useRef<HTMLElement>(null);
   // useOnClickOutside(closeRef, () => setShowHamburgerMenu(false));
   return (
     <>
-      <div
-        onClick={() => setShowHamburgerMenu((prev) => (prev = !prev))}
-        className="sm:hidden inline-block absolute w-[22px] right-1 top-[50%] -translate-y-[50%] h-[22px]"
-      >
-        <motion.div
-          className={` ${
-            showHamburgerMenu
-              ? "after:w-full before:w-full transform before:translate-y-0 after:translate-y-0 rotate-45 after:-rotate-90"
-              : "before:w-[60%] after:w-[80%] after:right-0 before:right-0 transform after:translate-y-[8.5px] before:-translate-y-[8.5px]"
-          } absolute w-full top-[50%] -translate-y-[50%] h-[2px] bg-white before:absolute after:absolute  
-          before:h-[2px] before:bg-white before:content-[' '] after:h-[2px] after:bg-white after:content-[' '] 
-          transition ease-in-out duration-500`}
-        />
-      </div>
-
       <motion.div
         initial={{ x: "100vw" }}
         animate={showHamburgerMenu ? { x: "0" } : { x: "100vw" }}
         transition={{ duration: 0.5, ease: "easeIn" }}
-        className="fixed top-[100px] right-0 left-0 bottom-0 bg-black/60"
+        className="fixed top-[100px] right-0 left-0 bottom-0 overflow-scroll bg-black/60 z-[100000]"
       >
         <motion.nav
           // ref={closeRef}
@@ -118,4 +104,6 @@ export default function HamburgerMenu() {
       </motion.div>
     </>
   );
-}
+});
+
+export default HamburgerMenu;

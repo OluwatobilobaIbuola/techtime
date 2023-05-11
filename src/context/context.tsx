@@ -2,13 +2,7 @@ import React from "react";
 import { createContext, useState } from "react";
 import { EventValuesContextType, mode } from "../types";
 
-export const EventValues = createContext<EventValuesContextType>({
-  mode: "true",
-  screenSize: window.innerWidth,
-  setScreenSize: () => {},
-  setMode: () => {},
-  toggleTheme: () => {},
-});
+export const EventValues = createContext({} as EventValuesContextType);
 
 export const EventValuesContext = ({
   children,
@@ -17,6 +11,7 @@ export const EventValuesContext = ({
 }) => {
   const [mode, setMode] = useState<mode>("true");
   const [screenSize, setScreenSize] = useState(window.innerWidth);
+  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 
   const toggleTheme = (mode: mode): void => {
     if (mode === "false") {
@@ -36,6 +31,8 @@ export const EventValuesContext = ({
         toggleTheme,
         mode,
         setMode,
+        showHamburgerMenu,
+        setShowHamburgerMenu,
       }}
     >
       {children}

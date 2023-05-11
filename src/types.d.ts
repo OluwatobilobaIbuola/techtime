@@ -1,4 +1,5 @@
 import { initialState } from "./constant";
+import { SetStateAction } from "react";
 
 export type mode = "true" | "false";
 
@@ -8,6 +9,8 @@ export interface EventValuesContextType {
   screenSize: number;
   toggleTheme(value: string): void;
   mode: mode;
+  showHamburgerMenu: boolean;
+  setShowHamburgerMenu(value: SetStateAction<boolean>): void;
 }
 
 export type SubHamburgerMenuType = {
